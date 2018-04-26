@@ -32,9 +32,9 @@ public class Publisher implements PublisherInterface {
 
     @Override
     public void notifySubscribers(String message) {
-            for (PublisherActionListener subscriber: listeners){
-                subscriber.doAction(message);
-            }
+        for (PublisherActionListener subscriber: listeners){
+            subscriber.doAction(message);
+        }
     }
 
     public void createNewMessage(String message){

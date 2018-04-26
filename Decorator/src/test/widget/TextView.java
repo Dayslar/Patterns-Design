@@ -4,11 +4,6 @@ public class TextView implements Component {
 
     @Override
     public void draw() {
-        System.out.println("TextView draw");
-    }
-
-    @Override
-    public String toString() {
-        return "TextView";
+        System.out.print("TextView draw");
     }
 }

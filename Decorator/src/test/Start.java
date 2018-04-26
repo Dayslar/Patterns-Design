@@ -11,6 +11,7 @@ public class Start {
 
         Component textView = new TextView();
         textView.draw();
+        System.out.println();
 
         Component withBorder = new ColorDecorator(new BorderDecorator(textView));
         withBorder.draw();
