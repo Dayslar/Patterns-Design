@@ -9,29 +9,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        TransportFactory transportFactory = RussianFactory.getInstance();
-        AirCraft airCraft = transportFactory.createAircraft();
-        airCraft.flight();
+        System.out.println("Русская фабрика");
+        TransportFactory transportFactory = RussianFactory.getInstance(); //получаем экземпляр русской транспортной фабрику
+        AirCraft airCraft = transportFactory.createAircraft(); //строим самолет
+        airCraft.flight(); //взлетаем на самолете
 
-        Car car = transportFactory.createCar(RoadType.OFF_ROAD);
-        car.drive();
+        Car car = transportFactory.createCar(RoadType.OFF_ROAD); //строим автомобиль
+        car.drive(); //едем на автомобиле
 
+        System.out.println();
+        System.out.println("Американская фабрика");
+        transportFactory = USAFactory.getInstance(); //получаем экземпляр американской транспортной фабрику
+        airCraft = transportFactory.createAircraft(); //строим самолет
+        airCraft.flight(); //взлетаем на самолете
 
-        transportFactory = USAFactory.getInstance();
-        airCraft = transportFactory.createAircraft();
-        airCraft.flight();
-
-        car = transportFactory.createCar(RoadType.OFF_ROAD);
-        car.drive();
-
-
-        transportFactory = RussianFactory.getInstance();
-        airCraft = transportFactory.createAircraft();
-        airCraft.flight();
-
-        car = transportFactory.createCar(RoadType.OFF_ROAD);
-        car.drive();
-
+        car = transportFactory.createCar(RoadType.OFF_ROAD); //строим автомобиль
+        car.drive(); //едем на автомобиле
     }
 
 }
